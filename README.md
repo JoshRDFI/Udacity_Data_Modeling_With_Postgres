@@ -1,5 +1,7 @@
 # Sparkify Database ETL using PostgreSQL and Python 3
 
+#### Note: The data files are not included in this repository
+
 ## Overview
 In this project, a new company, *Sparkify*, wants to create a database of all the songs and artists played by the users on their platform. The data is contained in two directories with files in JSON format: songs and logs. This is not easily accessible, and therefore it was decided to create an ETL (Extract, Transform, Load) pipeline and store the data in a star schema database. The database software chosen was PostgreSQL. Python was chosen as the language to extract the data from the JSON files and import it into the database. Additionally, Python is used to create the database and its associated tables. 
 
