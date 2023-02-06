@@ -58,7 +58,7 @@ def process_log_file(cur, filepath):
         # get songid and artistid from song and artist tables
         cur.execute(song_select, (row.song, row.artist, row.length))
         results = cur.fetchone()
-        print(results)
+
         if results:
             song_id, artist_id = results
         else:
@@ -66,7 +66,6 @@ def process_log_file(cur, filepath):
 
     # insert songplay record
     songplay_data = [index+1, row.ts, row.userId, row.level, song_id, artist_id, row.sessionId, row.location, row.userAgent]
-    print(songplay_data)
     cur.execute(songplay_table_insert, songplay_data)
         
 
